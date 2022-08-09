@@ -1,0 +1,114 @@
+.cardBox {
+  border: 1px solid #000;
+  border-radius: 5px;
+  padding: 0 20px;
+  margin: 45px 0;
+  .table {
+    .quantity {
+      display: flex;
+      justify-content: space-between;
+      input {
+        margin: 0 20px;
+      }
+    }
+    tbody{
+      border-top: 1px solid #c61d21;
+      border-bottom: 1px solid #c61d21;
+      tr {
+        td {
+          border-bottom: 0;
+          text-align: center;
+          img {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+          }
+        }
+      }
+      input {
+        text-align: center;
+      }
+    }
+  }
+  .headCard {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    span {
+      font-size: 16px;
+      cursor: pointer;
+      background-color: #eee;
+      transition: all 0.3s ease-in-out;
+      &:hover {
+        background-color: #e67779;
+        color: black !important;
+        border-bottom: #000 3px solid !important;
+        box-shadow: 0px 5px 10px #000;
+      }
+    }
+  }
+}
+
+
+@media screen and (max-width:568px)
+{
+  .lead {
+    font-size: 14px !important;
+    margin-top: 10px;
+  }
+
+  .card-header {
+    padding: 5px !important;
+  }
+
+  .headCard {
+    margin-bottom: 10px !important;
+    display: flex;
+    align-items: center;
+  }
+  
+  table th {
+    font-size: 13px !important;
+    padding: 0 !important;
+  }
+
+  td {
+    padding: 0 !important;
+  }
+
+  .btn-danger {
+    padding: 0 !important;
+  }
+
+  td img {
+    width: 40px !important;
+    height: 40px !important;
+  }
+
+  .quantity button {
+    padding: 5px !important;
+    border: none !important;
+    margin: 0 5px !important;
+  }
+
+  // .btn-dark {
+  //   display: none;
+  // }
+
+  .title {
+    font-size: 12px !important;
+  }
+
+  input {
+    width: 100%;
+    text-align: left !important;
+    padding: 0px !important;
+    margin: 0 !important;
+    
+  }
+
+  .form-control {
+    font-size: 16px !important;
+    padding: 0;
+  }
+}

@@ -1,0 +1,27 @@
+nav {
+  background:linear-gradient(to right , #950b0b, #440606);
+}
+
+ul li a 
+{
+  font-size: 22px;
+}
+
+.navbar-brand{
+  font-size: 35px;
+}
+
+.active {
+  font-weight: 700;
+  border-bottom: solid 4px rgb(235, 227, 227);
+  transition: all .05s;
+}
+
+.navbar-toggler {
+  font-size: 25px;
+  background-color: rgb(241, 241, 237) !important;
+}
+
+.navbar-toggler:focus {
+  box-shadow: none !important;
+}

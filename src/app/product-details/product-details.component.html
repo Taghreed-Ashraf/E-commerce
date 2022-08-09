@@ -1,0 +1,28 @@
+<div class="container mt-5">
+  
+  <div class="py-5">
+    <div *ngIf="isLoading" class="loading w-25 m-auto text-center">
+      <app-spinner></app-spinner>
+    </div>
+  
+  <div *ngIf="!isLoading" class="row my-5">
+    <div class="col-md-4">
+      <div class="pic">
+        <img [src]="productData.image" class="img-fluid mb-2" alt="">
+      </div>
+    </div>
+  
+    <div class="col-md-8 pt-5">
+      <div class="details ms-5">
+        <h2 class="my-4">{{productData.title}}</h2>
+        <h5 class="mb-4"><span class="text-danger">category : </span>{{productData.category}}</h5>
+        <h5 class="mb-4">{{productData.description}}</h5>
+        <h5 class="mb-4"><span class="text-danger">Rate : </span> {{productData.rating.rate}}</h5>
+        <h5 class="mb-4"><span class="text-danger">Count : </span> {{productData.rating.count}}</h5>
+        <h5 class="mb-5"><span class="text-danger">Price : </span> {{productData.price}}</h5>
+      </div>
+    </div>
+  </div>
+  </div>
+ 
+</div>

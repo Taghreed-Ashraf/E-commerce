@@ -1,0 +1,23 @@
+<div class="container mt-5">
+
+  <div class="py-5">
+    <div class="width my-4 w-50 m-auto">
+      <app-select [title]="'Choose Category :'" [data]="allCategory" (selectedValue)="filterCategory($event)"></app-select>
+    </div>
+  
+    <div *ngIf="isLoading" class="loading w-25 m-auto text-center">
+      <app-spinner></app-spinner>
+    </div>
+    
+  <div class="mt-5">
+    <div class="row" *ngIf="!isLoading">
+      <div *ngFor="let item of allProduct" class="col-md-3">
+        <app-product [data]="item" (item)="addToCard($event)"></app-product>
+      </div>
+    </div>
+  </div>
+  </div>
+  
+  </div>
+  
+  

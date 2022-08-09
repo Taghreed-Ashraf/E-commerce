@@ -1,0 +1,47 @@
+<div class="container mt-5">
+  <div class="py-5">
+    <div class="cardBox">
+      <h1 class="text-center mt-4">Shopping Card</h1>
+      <div class="headCard">
+        <p class="lead">You Have <label class="text-danger">{{cardProducts.length}}</label> item in Your Card</p>
+        <span class="text-danger card-header p-2 border-bottom border-3 border-danger" (click)="clearAllCards()">Clear All Items</span>
+      </div>
+      <table class="table table-striped align-middle text-center">
+        <thead>
+          <tr>
+            <th>Item</th>
+            <th>Name</th>
+            <th>Price</th>
+            <th>Quaintity</th>
+            <th>Total</th>
+            <th></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let item of cardProducts ; let index = index">
+            <td><img [src]="item.item.image" alt=""></td>
+            <td class="title">{{item.item.title}}</td>
+            <td >{{item.item.price}}</td>
+            <td>
+              <div class="quantity">
+                <button class="btn btn-dark" (click)="addQuantity(index)">+</button>
+                <input type="number" min="1" class="form-control" [(ngModel)]="item.quantity" (change)="detectedChanges()">
+                <button class="btn btn-dark" (click)="minQuantity(index)">-</button>
+              </div>
+            </td>
+            <td>{{item.item.price * item.quantity}}</td>
+            <td>
+              <button class="btn btn-danger" (click)="deleteProduct(index)">Delete</button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <div class="float-end text-center mb-3">
+        <p>Total : {{total}} L.E </p>
+        <button class="btn btn-success" (click)="sendCard()">Order Now</button>
+      </div>
+      <div class="clearfix"></div>
+    </div>
+  </div>
+  
+</div>
